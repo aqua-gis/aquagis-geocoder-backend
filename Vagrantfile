@@ -3,8 +3,9 @@
 
 Vagrant.configure("2") do |config|
   # Apache webserver
-  config.vm.network "forwarded_port", guest: 80, host: 8089
-  config.vm.network "forwarded_port", guest: 8088, host: 8088
+  config.vm.network "forwarded_port", guest: 80, host: 8083
+  config.vm.network "forwarded_port", guest: 8088, host: 8084
+  config.vm.network "forwarded_port", guest: 5432, host: 5444
 
   # If true, then any SSH connections made will enable agent forwarding.
   config.ssh.forward_agent = true
